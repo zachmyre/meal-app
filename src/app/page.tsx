@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#e6e3bb7f] py-2">
       <Head>
         <title>MEALzi - Meal Planning Made Easy</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,7 +19,7 @@ export default function Home() {
           />
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-bold text-stone-400 mt-8">
+        <h1 className="text-4xl sm:text-6xl font-bold text-stone-600 mt-8">
           Welcome to MEALzi
         </h1>
 
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Features */}
-        <div className="flex flex-col lg:flex-row justify-center max-w-4xl mt-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center mt-10">
           <div className="bg-lime-200 rounded-lg p-6 m-4 w-full sm:w-96">
             <Image
               src="/features/storage.jpg"
@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t mt-8">
+      <footer className="flex items-center justify-center w-full h-24 border-t-8 mt-8">
         <p className="text-lime-600">
           &copy; {new Date().getFullYear()} MEALzi. All rights reserved.
         </p>
