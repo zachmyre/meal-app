@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mealzi: Your Meal Planning and Grocery Guru
 
-## Getting Started
+Tired of scrambling for dinner ideas and struggling to keep track of your grocery list? Mealzi is here to save the day! This user-friendly app streamlines the meal planning process, helping you:
 
-First, run the development server:
+Store and organize your favorite recipes in one convenient location. No more searching through cookbooks or websites.
+Effortlessly generate weekly or monthly meal plans based on your preferences and dietary needs. Say goodbye to mealtime monotony!
+Automatically create grocery lists from your chosen meal plans, ensuring you have all the ingredients you need. Eliminate unnecessary trips to the store.
+Securely log in or register to personalize your Mealzi experience and keep your recipes and meal plans accessible.
+Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Recipe Management:
+Add, edit, and delete recipes with ease.
+Store recipe details, ingredients, instructions, and optional images.
+Organize recipes with categories or tags for better searchability (✔ Feature Implemented)
+Meal Plan Generation:
+Generate meal plans for weeks or months based on your desired duration.
+Customize meal plans by selecting specific recipes or filtering by dietary restrictions (✔ Feature Implemented)
+Drag-and-drop functionality to easily adjust the meal plan schedule (☐ Feature To Do)
+Grocery List Generation:
+Automatically generate shopping lists based on your chosen meal plan.
+Group ingredients by category for efficient grocery shopping (✔ Feature Implemented)
+Option to export grocery list to printable format or mobile apps (☐ Feature To Do)
+User Accounts:
+Secure login and registration system (✔ Feature Implemented)
+User profiles for personalized recipe storage and meal planning (☐ Feature To Do)
+Development Status:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In Progress: Core functionalities are being actively developed.
+Planned Features: We're continuously working on adding new features based on user feedback.
+Feel free to contribute! We welcome pull requests and suggestions to make Mealzi even better.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Technologies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This README can be filled in with the specific technologies you're using for the frontend, backend, and database (e.g., Next.js, Node.js, PostgreSQL).
+Getting Started (To Be Added Later):
 
-## Learn More
+Installation instructions will be provided once the app is ready for deployment.
+Contributing (To Be Added Later):
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Guidelines for contributing code and suggestions will be included.
+We're excited to see how Mealzi simplifies your meal planning and grocery shopping!
