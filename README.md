@@ -1,41 +1,29 @@
-# Mealzi: Your Meal Planning and Grocery Guru
+# Mealzi
 
-Tired of scrambling for dinner ideas and struggling to keep track of your grocery list? Mealzi is here to save the day! This user-friendly app streamlines the meal planning process, helping you:
+Mealzi is a meal planning application designed to simplify your culinary experience. Whether you're a seasoned chef or a novice in the kitchen, Mealzi provides you with the tools to plan your meals effortlessly, saving you time and stress.
 
-Store and organize your favorite recipes in one convenient location. No more searching through cookbooks or websites.
-Effortlessly generate weekly or monthly meal plans based on your preferences and dietary needs. Say goodbye to mealtime monotony!
-Automatically create grocery lists from your chosen meal plans, ensuring you have all the ingredients you need. Eliminate unnecessary trips to the store.
-Securely log in or register to personalize your Mealzi experience and keep your recipes and meal plans accessible.
-Features:
+## Features
 
-Recipe Management:
-Add, edit, and delete recipes with ease.
-Store recipe details, ingredients, instructions, and optional images.
-Organize recipes with categories or tags for better searchability (✔ Feature Implemented)
-Meal Plan Generation:
-Generate meal plans for weeks or months based on your desired duration.
-Customize meal plans by selecting specific recipes or filtering by dietary restrictions (✔ Feature Implemented)
-Drag-and-drop functionality to easily adjust the meal plan schedule (☐ Feature To Do)
-Grocery List Generation:
-Automatically generate shopping lists based on your chosen meal plan.
-Group ingredients by category for efficient grocery shopping (✔ Feature Implemented)
-Option to export grocery list to printable format or mobile apps (☐ Feature To Do)
-User Accounts:
-Secure login and registration system (✔ Feature Implemented)
-User profiles for personalized recipe storage and meal planning (☐ Feature To Do)
-Development Status:
+- **Custom Meal Plans**: Create personalized meal plans tailored to your dietary preferences, allergies, and nutritional goals.
+- **Recipe Library**: Access a vast collection of recipes ranging from quick and easy meals to gourmet dishes, with options for every taste and occasion.
+- **Grocery List Generation**: Automatically generate grocery lists based on your meal plans, ensuring you have all the ingredients you need for the week ahead.
+- **Nutritional Information**: View detailed nutritional information for each recipe, helping you make informed choices about your meals.
+- **Meal Schedule**: Plan your meals for the entire week with an intuitive scheduling interface, allowing you to stay organized and on track.
+- **Cooking Instructions**: Step-by-step cooking instructions for each recipe, making it easy to follow along, even for beginners.
+- **Save Favorites**: Save your favorite recipes for quick access, ensuring you can easily revisit them whenever you like.
+- **Sync Across Devices**: Seamlessly sync your meal plans and recipes across multiple devices, so you can access them anytime, anywhere.
 
-In Progress: Core functionalities are being actively developed.
-Planned Features: We're continuously working on adding new features based on user feedback.
-Feel free to contribute! We welcome pull requests and suggestions to make Mealzi even better.
+## Todo List
 
-Technologies:
+- [ ] Implement user authentication system
+- [ ] Implement create recipe form
 
-This README can be filled in with the specific technologies you're using for the frontend, backend, and database (e.g., Next.js, Node.js, PostgreSQL).
-Getting Started (To Be Added Later):
 
-Installation instructions will be provided once the app is ready for deployment.
-Contributing (To Be Added Later):
+- [ ] Add option for meal plan sharing with friends
+- [ ] Enhance user interface for better user experience
+- [ ] Integrate meal reminders and notifications
+- [ ] Incorporate meal prep and cooking time estimation feature
+- [ ] Enable user feedback and rating system for recipes
+- [ ] Develop a meal planner widget for mobile devices
 
-Guidelines for contributing code and suggestions will be included.
-We're excited to see how Mealzi simplifies your meal planning and grocery shopping!
+Feel free to contribute to Mealzi by tackling any of the tasks above. Your feedback and suggestions are also welcome as we strive to make Mealzi the ultimate meal planning companion for everyone. 🍽️
