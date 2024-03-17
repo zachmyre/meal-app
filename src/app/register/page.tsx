@@ -110,7 +110,7 @@ export default function RegisterPage() {
           </form>
 
           <div className="mt-4 text-lime-800">
-            Already have an account?{' '}
+            Already have an account?
             <a
               href="/login"
               className="text-lime-600 font-medium hover:underline"
