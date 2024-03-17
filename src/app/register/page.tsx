@@ -1,20 +1,26 @@
 "use client";
 import Image from 'next/image';
 import { FormEvent, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
-export default function RegisterPage() {
+const RegisterPage = () => {
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
     // Validate passwords match
     if (password !== confirmPassword) {
       setError('Passwords do not match');
+      setLoading(false);
       return;
     }
 
@@ -36,11 +42,14 @@ export default function RegisterPage() {
         setPassword('');
         setConfirmPassword('');
         setError('');
+        router.push('/dashboard');
       } else {
         setError(data.message);
+        setLoading(false);
       }
     } catch (error) {
       setError('An error occurred during registration');
+      setLoading(false);
     }
   };
 
@@ -123,12 +132,12 @@ export default function RegisterPage() {
                 <div className="mb-4 text-red-500 font-medium">{error}</div>
               )}
 
-              <button
+              {loading ? (<LoadingSpinner />) : (<button
                 type="submit"
                 className="w-full px-8 py-3 text-lg font-medium rounded-md bg-lime-600 text-white hover:bg-lime-700 transition-colors duration-300"
               >
                 Register
-              </button>
+              </button>)}
             </form>
 
             <div className="mt-4 text-lime-800 space-x-2">
@@ -146,3 +155,5 @@ export default function RegisterPage() {
     </div>
   );
 }
+
+export default RegisterPage;
