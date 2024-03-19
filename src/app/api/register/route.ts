@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import dbConnect from '@/lib/db/dbConnect';
 import User from '@/lib/db/models/User';
-import bcrypt from 'bcrypt';  
+import bcrypt from 'bcrypt';
+import { signJwt } from '@/lib/auth/auth';
 
 async function POST(req: Request, res: Response) {
   if (req.method !== 'POST') {
@@ -32,10 +33,14 @@ async function POST(req: Request, res: Response) {
     });
 
     await user.save();
+
+    const token = signJwt({ userId: user._id });
+    console.log(token);
+
     return new Response(JSON.stringify(user), {
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "application/json", "Set-Cookie": `token=${token}; Path=/; HttpOnly; SameSite=Strict` },
       status: 201,
-   });
+    });
   } catch (error) {
     console.error(error);
     return new Response(JSON.stringify({ message: 'Error registering user' }), {
@@ -45,4 +50,4 @@ async function POST(req: Request, res: Response) {
   }
 }
 
-export {POST};
+export { POST };
