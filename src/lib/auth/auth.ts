@@ -15,9 +15,9 @@ export function signJwt(payload: object) {
 }
 
 // Helper function to verify a JWT
-export function verifyJwt(token: string) {
+export function verifyJwt(token: string): UserTokenData | null {
     try {
-        const decoded = jwt.verify(token, JWT_SECRET);
+        const decoded = jwt.verify(token, JWT_SECRET) as UserTokenData;
         return decoded;
     } catch (err) {
         return null;
@@ -45,4 +45,10 @@ export function authenticateJWT(req: NextRequest) {
     }
 
     return NextResponse.next();
+}
+
+export interface UserTokenData extends jwt.JwtPayload{
+    userId: string,
+    iat: number,
+    exp: number
 }

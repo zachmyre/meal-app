@@ -45,7 +45,7 @@ async function POST(req: Request, res: Response) {
     const refreshTokenExpiration = new Date(Date.now() + 60 * 24 * 60 * 60 * 1000); // 60 days from now
 
     // Password is valid, return a success message
-    return new Response(JSON.stringify({ message: user }), {
+    return new Response(JSON.stringify({ message: {email: user.email, _id: user._id} }), {
       headers: { "content-type": "application/json", "Set-Cookie": [`token=${token}; Path=/; Expires=${tokenExpiration.toUTCString()} HttpOnly; SameSite=Strict`, `refreshToken=${refreshToken}; Path=/; Expires=${refreshTokenExpiration.toUTCString()} HttpOnly; SameSite=Strict`].join(",") },
       status: 200,
     });
