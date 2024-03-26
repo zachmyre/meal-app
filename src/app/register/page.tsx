@@ -1,8 +1,9 @@
 "use client";
 import Image from 'next/image';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import LoadingSpinner from '@/components/LoadingSpinner';
+import { authorizeRedirect } from '@/lib/auth/auth';
 
 const RegisterPage = () => {
   const [loading, setLoading] = useState(false);
@@ -12,6 +13,10 @@ const RegisterPage = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    authorizeRedirect(router);
+  }, [])
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();

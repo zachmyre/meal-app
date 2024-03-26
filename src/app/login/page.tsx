@@ -1,5 +1,6 @@
 "use client";
 import LoadingSpinner from '@/components/LoadingSpinner';
+import { authorizeRedirect } from '@/lib/auth/auth';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -12,24 +13,7 @@ const LoginPage = () => {
   const router = useRouter(); 
 
   useEffect(() => {
-    const authorize = async () => {
-      console.log("authorizing");
-      const response = await fetch("/api/authorize", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if(response.ok) {
-        const data = await response.json();
-        console.log("data", data);
-        //TODO: set user in state
-        router.push("/dashboard");
-      }
-    }
-
-    authorize();
+    authorizeRedirect(router);
   }, [])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

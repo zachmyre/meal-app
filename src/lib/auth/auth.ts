@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
+import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 // Set your JWT secret
 export const JWT_SECRET = 'your-secret-key';
@@ -51,4 +52,21 @@ export interface UserTokenData extends jwt.JwtPayload{
     userId: string,
     iat: number,
     exp: number
+}
+
+
+export const authorizeRedirect = async (router: AppRouterInstance) => {
+        const response = await fetch("/api/authorize", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+  
+        if(response.ok) {
+          const data = await response.json();
+          console.log("data", data);
+          //TODO: set user in state
+          router.push("/dashboard");
+        }
 }
