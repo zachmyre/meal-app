@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 // Set your JWT secret
-export const JWT_SECRET = 'your-secret-key';
+export const JWT_SECRET = process.env.SECRET_KEY || "";
 
 // Configure JWT options
 export const jwtOptions = {
